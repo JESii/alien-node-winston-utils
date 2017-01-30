@@ -1,15 +1,15 @@
 'use strict';
 
-var getLevel = require('../lib/methods/getLevel');
+const getLevel = require('../lib/methods/getLevel');
 
-var FAKE_LEVEL = 'INFO';
+const FAKE_LEVEL = 'INFO';
 
-var mockOptions = {
+const mockOptions = {
   level : FAKE_LEVEL
 };
 
-describe('getLevel', function() {
-  it('should get the log level from the options object', function() {
+describe('getLevel', () => {
+  it('gets the log level from the options object', () => {
     expect(getLevel(mockOptions)).toBe(FAKE_LEVEL);
   });
 });

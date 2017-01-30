@@ -1,27 +1,27 @@
 'use strict';
 
-var maybeGetMeta = require('../lib/methods/maybeGetMeta');
+const maybeGetMeta = require('../lib/methods/maybeGetMeta');
 
-var FAKE_META = {
+const FAKE_META = {
   foo : 'bar',
   baz : 'bat'
 };
 
-var FAKE_STRINGIFIED_META = '\n\t' + JSON.stringify(FAKE_META);
+const FAKE_STRINGIFIED_META = '\n\t' + JSON.stringify(FAKE_META);
 
-var mockOptionsWithMeta = {
+const mockOptionsWithMeta = {
   meta : FAKE_META
 };
 
-var mockOptionsWithoutMeta = {};
+const mockOptionsWithoutMeta = {};
 
-describe('maybeGetMeta', function() {
+describe('maybeGetMeta', () => {
 
-  it('should get the meta property off the options object if one exists', function() {
+  it('gets the meta property off the options object if one exists', () => {
     expect(maybeGetMeta(mockOptionsWithMeta)).toBe(FAKE_STRINGIFIED_META);
   });
 
-  it('should return an empty string if no meta object is provided', function() {
+  it('returns an empty string if no meta object is provided', () => {
     expect(maybeGetMeta(mockOptionsWithoutMeta)).toBe('');
   });
 

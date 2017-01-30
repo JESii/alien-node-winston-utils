@@ -1,22 +1,22 @@
 'use strict';
 
-var maybeGetMessage = require('../lib/methods/maybeGetMessage');
+const maybeGetMessage = require('../lib/methods/maybeGetMessage');
 
-var FAKE_MESSAGE = 'foo';
+const FAKE_MESSAGE = 'foo';
 
-var mockOptionsWithMessage = {
+const mockOptionsWithMessage = {
   message : FAKE_MESSAGE
 };
 
-var mockOptionsWithoutMessage = {};
+const mockOptionsWithoutMessage = {};
 
-describe('maybeGetMessage', function() {
+describe('maybeGetMessage', () => {
 
-  it('should get a message off the options object if one exists', function() {
+  it('gets a message off the options object if one exists', () => {
     expect(maybeGetMessage(mockOptionsWithMessage)).toBe(FAKE_MESSAGE)
   });
 
-  it('should return an empty string if no message is on the options object', function() {
+  it('returns an empty string if no message is on the options object', () => {
     expect(maybeGetMessage(mockOptionsWithoutMessage)).toBe('');
   });
 

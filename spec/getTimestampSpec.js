@@ -1,17 +1,17 @@
 'use strict';
 
-var getTimestamp = require('../lib/methods/getTimestamp.js');
+const getTimestamp = require('../lib/methods/getTimestamp.js');
 
-var FAKE_TIMESTAMP = 'foo';
+const FAKE_TIMESTAMP = 'foo';
 
-var mockOptions = {
-  timestamp : function() {
+const mockOptions = {
+  timestamp : () => {
     return FAKE_TIMESTAMP;
   }
 };
 
-describe('getTimestamp', function() {
-  it('should invoke the timestamp function on the options object', function() {
+describe('getTimestamp', () => {
+  it('invokes the timestamp function on the options object', () => {
     expect(getTimestamp(mockOptions)).toBe(FAKE_TIMESTAMP);
   });
 });
