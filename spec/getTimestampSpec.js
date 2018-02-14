@@ -5,9 +5,7 @@ const getTimestamp = require('../lib/methods/getTimestamp.js');
 const FAKE_TIMESTAMP = 'foo';
 
 const mockOptions = {
-  timestamp : () => {
-    return FAKE_TIMESTAMP;
-  }
+  timestamp : () => FAKE_TIMESTAMP
 };
 
 describe('getTimestamp', () => {

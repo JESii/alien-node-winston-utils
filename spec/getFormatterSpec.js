@@ -31,41 +31,33 @@ const fakeOptionsWithMeta = R.merge(fakeOptionsMinimal, {
 
 const fakeOptionsWithMessageAndMeta = R.merge(fakeOptionsWithMessage, fakeOptionsWithMeta);
 
-const makeFakeExpectedMinimalLog = () => {
-  return concatLogPieces([
-    Date(),
-    FAKE_LOG_LEVEL,
-    FAKE_EMPTY_MESSAGE,
-    FAKE_STRINGIFIED_EMPTY_META
-  ]);
-};
+const makeFakeExpectedMinimalLog = () => concatLogPieces([
+  Date(),
+  FAKE_LOG_LEVEL,
+  FAKE_EMPTY_MESSAGE,
+  FAKE_STRINGIFIED_EMPTY_META
+]);
 
-const makeFakeExpectedLogWithMessage = () => {
-  return concatLogPieces([
-    Date(),
-    FAKE_LOG_LEVEL,
-    FAKE_MESSAGE,
-    FAKE_STRINGIFIED_EMPTY_META
-  ]);
-};
+const makeFakeExpectedLogWithMessage = () => concatLogPieces([
+  Date(),
+  FAKE_LOG_LEVEL,
+  FAKE_MESSAGE,
+  FAKE_STRINGIFIED_EMPTY_META
+]);
 
-const makeFakeExpectedLogWithMeta = () => {
-  return concatLogPieces([
-    Date(),
-    FAKE_LOG_LEVEL,
-    FAKE_EMPTY_MESSAGE,
-    FAKE_STRINGIFIED_META
-  ]);
-};
+const makeFakeExpectedLogWithMeta = () => concatLogPieces([
+  Date(),
+  FAKE_LOG_LEVEL,
+  FAKE_EMPTY_MESSAGE,
+  FAKE_STRINGIFIED_META
+]);
 
-const makeFakeExpectedLogWithMessageAndMeta = () => {
-  return concatLogPieces([
-    Date(),
-    FAKE_LOG_LEVEL,
-    FAKE_MESSAGE,
-    FAKE_STRINGIFIED_META
-  ]);
-};
+const makeFakeExpectedLogWithMessageAndMeta = () => concatLogPieces([
+  Date(),
+  FAKE_LOG_LEVEL,
+  FAKE_MESSAGE,
+  FAKE_STRINGIFIED_META
+]);
 
 describe('getFormatter', () => {
 

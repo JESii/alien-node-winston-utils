@@ -4,13 +4,9 @@ const concatLogPieces = require('../lib/methods/concatLogPieces');
 
 const FAKE_LOG_PIECES = [1, 2, 3];
 
-const makeIllegalParamError = (param) => {
-  return new Error('Illegal value for parameter: ' + param);
-};
+const makeIllegalParamError = param => new Error(`Validation Error: Illegal value for parameter "${param}"`);
 
-const makeMissingParamError = (param) => {
-  return new Error('Missing required parameter: ' + param);
-};
+const makeMissingParamError = param => new Error(`Validation Error: Missing required parameter "${param}"`);
 
 describe('concatLogPieces', () => {
   it('converts an array into a space-delimited string when given no delimiter', () => {

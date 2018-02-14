@@ -1,11 +1,11 @@
 {
   "name"            : "alien-node-winston-utils",
-  "version"         : "0.0.5",
+  "version"         : "0.0.6",
   "description"     : "Helper functions for Winston logging on NodeJS",
   "main"            : "lib/Logger.js",
   "dependencies"    : {
     "ramda"       : "^0.x.x",
-    "o-validator" : "^0.1.x"
+    "o-validator" : "^1.x.x"
   },
   "devDependencies" : {
     "coveralls" : "^2.11.2",
